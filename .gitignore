@@ -1,0 +1,673 @@
+# =============================================================================
+# COMPREHENSIVE .GITIGNORE - For Most Common Technologies
+# =============================================================================
+# Based on github/gitignore templates
+
+# -----------------------------------------------------------------------------
+# 🚀 Operating Systems
+# -----------------------------------------------------------------------------
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Trashes
+*.psd
+*.key
+*.entitlements
+
+# Linux
+*~ 
+*.swp
+*.swo
+*~
+.DS_Store
+.fuse_hidden*
+.Directory
+.Trash-*
+.nfs*
+
+# -----------------------------------------------------------------------------
+# 💻 IDEs & Editors
+# -----------------------------------------------------------------------------
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# JetBrains (IntelliJ, WebStorm, etc)
+.idea/
+*.iml
+*.iws
+out/
+.idea_modules/
+
+# Vim
+[._]*.s[a-v][a-z]
+!*.svg
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+sftp-config.json
+Package Control.last-run
+.pk
+*.sublime-*
+
+# Atom
+atom/packages/*
+atom/node_modules/*
+.atom/
+
+# -----------------------------------------------------------------------------
+# 🐍 Python
+# -----------------------------------------------------------------------------
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IPython
+profile_default/
+ipython_config.py
+__pypackages__/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# -----------------------------------------------------------------------------
+# 🌐 JavaScript / Node.js
+# -----------------------------------------------------------------------------
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# -----------------------------------------------------------------------------
+# ☕ Java / Kotlin
+# -----------------------------------------------------------------------------
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# -----------------------------------------------------------------------------
+# 🦀 Rust
+# -----------------------------------------------------------------------------
+
+# Cargo
+target/
+Cargo.lock
+
+# -----------------------------------------------------------------------------
+# 🐹 Go
+# -----------------------------------------------------------------------------
+
+# Go workspace file
+go.work
+
+# Binary
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output of the go coverage tool
+*.out
+go-cover/
+
+# -----------------------------------------------------------------------------
+# 🟣 C# / .NET
+# -----------------------------------------------------------------------------
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio
+.vs/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin)
+*.userprefs
+
+# Mono auto generated files
+mono_crash.*
+
+# -----------------------------------------------------------------------------
+# 🔷 PHP
+# -----------------------------------------------------------------------------
+
+/vendor/
+node_modules/
+package-lock.json
+package.json
+
+# PHP Composer
+composer.phar
+/vendor/
+
+# Laravel specific
+/public/hot
+/public/storage
+/storage/*.key
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+
+# Composer
+composer.phar
+/vendor/
+
+# -----------------------------------------------------------------------------
+# 💎 Ruby / Rails
+# -----------------------------------------------------------------------------
+
+/vendor/bundle
+/bundle/
+
+# Cache
+.cache
+.byebug_history
+.rvmrc
+
+# Bundler
+.bundle
+Gemfile.lock
+
+# Rails
+/public/packs
+/public/assets
+/log/*
+/tmp/
+/storage/packs/*
+.env
+
+# Yarn
+.yarn/cache
+
+# -----------------------------------------------------------------------------
+# 🟪 Swift / Objective-C
+# -----------------------------------------------------------------------------
+
+# Xcode
+build/
+DerivedData
+*.xcuserstate
+*.xcworkspace
+!default.xcworkspace
+
+# Carthage
+Carthage/Build
+Carthage/Checkouts
+
+# CocoaPods
+Pods/
+
+# SPM
+Packages
+.swiftpm/
+.xcode.swiftpm/
+
+# -----------------------------------------------------------------------------
+# ⬜ General / Misc
+# -----------------------------------------------------------------------------
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+
+# Backup files
+*~.nib
+
+# Office files
+*.tmp
+~$*
+
+# PDF
+*.pdf
+
+# Images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.ico
+*.icns
+*.webp
+*.avif
+*.svgz
+
+# Audio/Video
+*.mp3
+*.mp4
+*.wav
+*.avi
+*.mov
+*.mkv
+*.webm
+*.flv
+*.wmv
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.tar.bz2
+*.tar.xz
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+*.mdb
+*.accdb
+
+# Credentials & Secrets
+*.pem
+*.key
+*.pub
+*.gpg
+*.gpg~
+credentials.json
+secrets.yml
+secrets.yaml
+.env.local
+.env.*.local
+
+# CI/CD
+.jenkins/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+.github/
+
+# Docker
+.docker/
+.dockerignore
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tfvars
+*.tfplan
+
+# Kubernetes
+*.kubeconfig
+
+# -----------------------------------------------------------------------------
+# 📦 Package Managers Specific
+# -----------------------------------------------------------------------------
+
+# npm
+package-lock.json
+yarn.lock
+
+# pip
+pip-log.txt
+.pip/
+
+# pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# Yarn
+yarn.lock
+
+# Bun
+bun.lockb
+
+# -----------------------------------------------------------------------------
+# 🔧 Build Tools
+# -----------------------------------------------------------------------------
+
+# Make
+*.o
+*.a
+*.so
+*.dylib
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# Gradle (already included in Java section but important)
+gradle-app.setting
+
+# Webpack
+dist/
+.cache/
+
+# Vite
+dist-ssr/
+dist/
+
+# Rollup
+*.glob
+node_modules/dist/
+
+# -----------------------------------------------------------------------------
+# 🔒 Security & Auth
+# -----------------------------------------------------------------------------
+
+# SSH keys
+*.pem
+*.ppk
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# AWS credentials
+.aws/
+credentials
+*.csv
+
+# Google Cloud
+*.json
+
+# Azure
+*.publishsettings
+
+# -----------------------------------------------------------------------------
+# 🧪 Testing
+# -----------------------------------------------------------------------------
+
+# Jest
+coverage/
+
+# Vitest
+coverage/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# Playwright
+playwright-report/
+test-results/
+
+# -----------------------------------------------------------------------------
+# 📝 Documentation
+# -----------------------------------------------------------------------------
+
+# Docusaurus
+.docusaurus/
+src/pages/_*.{js,jsx,ts,tsx}
+
+# Storybook
+storybook-static/
+
+# -----------------------------------------------------------------------------
+# 🔄 Version Control
+# -----------------------------------------------------------------------------
+
+# Git
+.git/
+.gitignore (this file itself - but not the pattern!)
+
+# Subversion
+.svn/
+
+# Mercurial
+.hg/
+
+# -----------------------------------------------------------------------------
+# 🖥️ Environment & Development
+# -----------------------------------------------------------------------------
+
+# Local environment
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Overrides
+.env*.override
+
+# Debug
+npm_debug.log*
+yarn-error.log*
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# -----------------------------------------------------------------------------
+# 📱 Mobile
+# -----------------------------------------------------------------------------
+
+# iOS
+build/
+DerivedData/
+*.mobileprovision
+*.xcuserstate
+
+# Android
+build/
+.gradle/
+local.properties
+*.apk
+*.aab
+
+# React Native
+ios/
+android/
+*.xcworkspace
