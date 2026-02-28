@@ -2,7 +2,7 @@
 name: git-commit
 description: "Git Commit Specialist: analyze uncommitted changes, split into logical commits, detect breaking changes, and draft Conventional/Angular-style commit messages with a Keep-a-Changelog body. Produces a preview plan and a strict .git/COMMIT.TXT message file before any commit command is run."
 metadata:
-  version: 0.2.0
+  version: 0.3.0
 ---
 
 # Git Commit
@@ -19,22 +19,11 @@ Activate this skill when the user asks to:
 
 **Important:** Activate this skill **before** planning how to commit.
 
-## Inputs
-
-You may operate in either mode:
-
-- **CLI mode (preferred):** You can run git commands and use their outputs.
-- **No-CLI mode:** If you cannot run commands, request the user to paste:
-  - `git status`
-  - `git diff --stat`
-  - `git diff --staged --stat`
-  - (when needed) `git diff` / `git diff --staged` for specific files
-
 ## Constraints & Boundaries (non‑negotiable)
 
 **DO**
 - Always create a **commit plan preview** before any `git commit`.
-- Base all claims on **observable diff/status** (or user-pasted outputs).
+- Base all claims on **observable diff/status**.
 - Detect and label **breaking changes** when present.
 - Prefer **multiple small logical commits** over one “mega commit”.
 
@@ -61,7 +50,7 @@ No `git commit` is executed until the user confirms **Proceed? [y/n]**.
 
 ### Step 0 — Preflight Checks
 
-Run (or request output for):
+Run:
 
 ```bash
 git status
@@ -154,12 +143,12 @@ Rules:
 - imperative mood (“add”, “fix”, “update”)
 - ≤ 50 chars for description when possible
 - no trailing period
-- include a scope when it adds clarity
+- **scope is REQUIRED** (e.g., `feat(api)`, `fix(auth)`, `docs(readme)`)
 
 Types reference: `docs/angular-commits.md`
 
 **Body format (Keep a Changelog style):**
-Only include categories that have items.
+**REQUIRED** - body cannot be blank. Include at least one category.
 
 Example:
 ```
@@ -206,7 +195,7 @@ For the *next* commit to run, create `.git/COMMIT.TXT` exactly like:
 
 Where:
 - `{{HEADER}}` is a single line
-- `{{BODY}}` is blank or Keep-a-Changelog sections
+- `{{BODY}}` is Keep-a-Changelog sections (never blank)
 - `{{FOOTER}}` is blank or footer lines (no markdown)
 
 ### Step 7 — Execute Commits (single or multiple)
@@ -249,7 +238,7 @@ Repeat for the next group.
 
 [1] Logical Change: <short summary>
 Type: <feat|fix|docs|...>
-Scope: <scope or ->
+Scope: <scope>
 Breaking: <NO|POSSIBLE|YES>
 
 Files:

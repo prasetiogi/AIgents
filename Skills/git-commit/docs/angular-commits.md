@@ -38,9 +38,9 @@ The Angular Commit Message Format is a standardized structure for git commit mes
 | `revert`   | Revert previous commit                  |
 | `agents`   | AI functionality (Rules/Skills)         |
 
-### 2. Scope (Optional)
+### 2. Scope (Required)
 
-The scope provides additional context and is recommended when it increases clarity. Omit it when it would be noisy or ambiguous:
+The scope provides additional context. Always include it:
 
 - `feat(auth):` - authentication feature
 - `fix(api):` - API related fix
@@ -53,7 +53,7 @@ The scope provides additional context and is recommended when it increases clari
 - No period at end
 - Lowercase first letter
 
-### 4. Body (Optional)
+### 4. Body (Required)
 
 - Separate from header with blank line
 - Use imperative mood

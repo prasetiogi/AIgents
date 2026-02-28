@@ -63,7 +63,7 @@ Security-related changes.
 
 ## Usage in Commit Messages
 
-Only include categories that have at least one bullet. Empty sections add noise.
+**Note:** Body is **REQUIRED** - always include at least one category.
 
 Apply these categories to group related changes:
 
