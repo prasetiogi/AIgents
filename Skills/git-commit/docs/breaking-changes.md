@@ -8,6 +8,11 @@ A breaking change is any modification that:
 - Changes API contracts (parameters, return values)
 - Modifies expected behavior in ways that break existing integrations
 
+## Evidence Rule
+
+Mark a change as **BREAKING** only when you can point to concrete evidence in the diff (or user-provided output).  
+If you suspect a break but can’t confirm, label it **POSSIBLE BREAKING** and state what evidence is missing.
+
 ## Detection Patterns
 
 ### 1. File Deletions
@@ -150,12 +155,19 @@ Does it remove/rename anything? ───Yes───► BREAKING
     │
     No
     ▼
-Does it change behavior? ───Yes───► CHECK COMPATIBILITY
+Does it change behavior? ───Yes───► CHECK COMPATIBILITY (may be POSSIBLE BREAKING)
     │
     No
     ▼
 NOT BREAKING
 ```
+
+## Marking Breaking Changes in the Commit Message
+
+When breaking is confirmed:
+- Add `!` after type/scope in the header (e.g., `feat(api)!: ...`).
+- Add a footer line starting with `BREAKING CHANGE:` describing the impact.
+- Include a short migration note in the body when useful.
 
 ## Handling Breaking Changes
 

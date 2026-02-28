@@ -38,9 +38,9 @@ The Angular Commit Message Format is a standardized structure for git commit mes
 | `revert`   | Revert previous commit                  |
 | `agents`   | AI functionality (Rules/Skills)         |
 
-### 2. Scope (Required)
+### 2. Scope (Optional)
 
-The scope provides additional context:
+The scope provides additional context and is recommended when it increases clarity. Omit it when it would be noisy or ambiguous:
 
 - `feat(auth):` - authentication feature
 - `fix(api):` - API related fix
@@ -53,12 +53,15 @@ The scope provides additional context:
 - No period at end
 - Lowercase first letter
 
-### 4. Body (Required)
+### 4. Body (Optional)
 
 - Separate from header with blank line
 - Use imperative mood
 - Explain "what" and "why", not "how"
 - Wrap at 72 characters
+
+**Note:** If you use a Keep-a-Changelog style body (### Added/Changed/Fixed), bullets are often written in **past tense**. That's acceptable—keep the **header** imperative.
+
 
 ### 5. Footer (Optional)
 

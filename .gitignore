@@ -671,3 +671,6 @@ local.properties
 ios/
 android/
 *.xcworkspace
+
+# X-Eval
+Evaluator/
