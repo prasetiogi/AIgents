@@ -1,8 +1,8 @@
 ---
 name: git-commit
-description: "Git Commit Specialist: analyze uncommitted changes, split into logical commits, detect breaking changes, and draft Conventional/Angular-style commit messages with a Keep-a-Changelog body. Produces a preview plan and a strict .git/COMMIT.TXT message file before any commit command is run."
+description: "Git Commit Specialist: analyze uncommitted changes, split into logical commits, detect breaking changes, and draft commit messages with structured header, body, and footer. Produces a preview plan and a strict .git/COMMIT.TXT message file before any commit command is run."
 metadata:
-  version: 0.3.0
+  version: 1.0.0
 ---
 
 # Git Commit
@@ -121,20 +121,14 @@ Goal: **≤ 5 commits** by default (unless user requests otherwise).
 
 ### Step 3 — Detect Breaking Changes (per group)
 
-Use the decision guide in `docs/breaking-changes.md`.
-
-**Fast checks:**
-- Deletions/renames in public paths or exports (`git diff --name-status`)
-- API surface changes (routes, public functions, exported types)
-- Config keys/schema changes
-- DB schema migrations that remove/rename/alter constraints
+Use the decision guide in `docs/footer.md` to identify patterns. The guide provides detection keywords, analysis steps, and a decision tree.
 
 **Mark Breaking = YES** if any breaking pattern is confirmed.  
 If uncertain, mark **Breaking = POSSIBLE** and state what evidence is missing.
 
 ### Step 4 — Draft Commit Message (header + body + footer)
 
-**Header format (Angular/Conventional):**
+**Header format:**
 ```
 <type>(scope): <description>
 ```
@@ -145,9 +139,9 @@ Rules:
 - no trailing period
 - **scope is REQUIRED** (e.g., `feat(api)`, `fix(auth)`, `docs(readme)`)
 
-Types reference: `docs/angular-commits.md`
+Types reference: `docs/header.md`
 
-**Body format (Keep a Changelog style):**
+**Body format:**
 **REQUIRED** - body cannot be blank. Include at least one category.
 
 Example:
@@ -162,8 +156,8 @@ Example:
 - Fixed ...
 ```
 
-Guidance reference: `docs/keepachangelog.md`  
-Note: Keep-a-Changelog bullets are typically **past tense**; that’s acceptable here. Keep the **header imperative**.
+Guidance reference: `docs/body.md`  
+Note: Body bullets are typically **past tense**; that’s acceptable here. Keep the **header imperative**.
 
 **Footer rules (order matters):**
 1. `BREAKING CHANGE: ...` (required if Breaking = YES)
@@ -195,7 +189,7 @@ For the *next* commit to run, create `.git/COMMIT.TXT` exactly like:
 
 Where:
 - `{{HEADER}}` is a single line
-- `{{BODY}}` is Keep-a-Changelog sections (never blank)
+- `{{BODY}}` is structured body sections (never blank)
 - `{{FOOTER}}` is blank or footer lines (no markdown)
 
 ### Step 7 — Execute Commits (single or multiple)
@@ -289,6 +283,6 @@ Proceed? [y/n]
 
 ## Resources
 
-- `docs/angular-commits.md`
-- `docs/keepachangelog.md`
-- `docs/breaking-changes.md`
+- `docs/header.md`
+- `docs/body.md`
+- `docs/footer.md`

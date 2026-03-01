@@ -1,10 +1,8 @@
-# Keep a Changelog Format
-
-Based on https://keepachangelog.com/en/1.1.0/
+# Body Format
 
 ## Overview
 
-Keep a Changelog provides a human-readable structure for commit message bodies that makes it easy to generate changelogs and understand what changed.
+This format provides a human-readable structure for commit message bodies.
 
 ## Categories
 
@@ -89,7 +87,8 @@ fix(api): resolve memory leak
 
 ## Guidelines
 
-1. **Use past tense** - "Added" not "Add"
+1. **SKILL.md is code, not docs** - SKILL.md files define AI agent behavior, not user documentation. Use `refactor` or `agents` type.
+2. **Use past tense** - "Added" not "Add"
 2. **Be specific** - "Fixed login bug" vs "Fixed bug"
 3. **One category per change** - Choose the most relevant
 4. **Keep bullet points concise** - Expand in body if needed

@@ -1,8 +1,8 @@
-# Angular Commits Format
+# Header Format
 
 ## Overview
 
-The Angular Commit Message Format is a standardized structure for git commit messages that enables:
+The commit message header format is a standardized structure for git commit messages that enables:
 
 - Automated changelog generation
 - Semantic versioning automation
@@ -36,7 +36,7 @@ The Angular Commit Message Format is a standardized structure for git commit mes
 | `ci`       | CI configuration                        |
 | `chore`    | Other changes (maintenance)             |
 | `revert`   | Revert previous commit                  |
-| `agents`   | AI functionality (Rules/Skills)         |
+| `agents`   | AI functionality (Rules/Skills)        |
 
 ### 2. Scope (Required)
 
@@ -60,7 +60,7 @@ The scope provides additional context. Always include it:
 - Explain "what" and "why", not "how"
 - Wrap at 72 characters
 
-**Note:** If you use a Keep-a-Changelog style body (### Added/Changed/Fixed), bullets are often written in **past tense**. That's acceptable—keep the **header** imperative.
+**Note:** If you use a structured body style (### Added/Changed/Fixed), bullets are often written in **past tense**.
 
 
 ### 5. Footer (Optional)
